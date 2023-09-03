@@ -15,8 +15,8 @@ function writePassword() {
 
   function generatePassword(){ //we want to put all the code for making the actual password here. 
     var generatorArray = []; //Used to push the values from our PasswordKey into with rng.
-    var alphabetKey = "abcdefghijklmnopqrstuvwxyz";
-    var alphabetKeyCap = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    var alphabetKey = "abcdefghijklmnopqrstuvwxyz"; // We alternatively could have made an Object for every variable that we need and called it within our code.
+    var alphabetKeyCap = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"; //Mentioned below but we could use toUpperCase on our original key, but we would already need another variable to not overwrite the whole key.
     var numberKey = "123456789";
     var specialKey = "!@#$%^&*()<>?,./{}[]|";
     var passwordKey = ""; //holds every selected array inside and we will pull from here when using random.
@@ -96,7 +96,7 @@ function writePassword() {
 
 // Done: use random.math to cycle through indexes of the array and place a value from selected type. - for future we should include all so we dont rewrite/miss values in the array.
  
-if (lc){
+if (lc){ // Left out notification when selecting lowercase and uppercase as it may be redundant clicking so many boxes.
 
   passwordKey = passwordKey.concat(alphabetKey);
   // lowercase is in! -- we could alternatively edit the alphabetKey to be capital or lowercase with toUpperCase and toLowercase  however we may need another variable anyways to not overwrite the original.
