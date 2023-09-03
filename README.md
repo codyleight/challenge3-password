@@ -20,4 +20,4 @@ Repo location on pc: - C:\Users\JC\Desktop\Bootcamp2\challenge3
 
 ## Photo Preview of Website
  
-![Alt text](image-2.png)
+![Alt text](image.png)
