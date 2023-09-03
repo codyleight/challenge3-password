@@ -67,19 +67,16 @@ function writePassword() {
     }
   
     pl = prompt('How long do you want your password to be? Enter a number between 8-128'); //take user input for how many keys they want in their password, fill slots of passwordArray.length with it.
-    if (pl < 8 || pl > 128 ){ //user fails to enter a correct amount, they are given 1 more try before we restart.
+    while (pl < 8 || pl > 128 ){ //user fails to enter a correct amount, 
       pl = prompt('please re-enter a number higher than 8 and less than 128 or ELSE');
-      if (pl < 8 || pl > 128 ){
-        alert("Restarting since you didn't meet the length criteria :(")
-        console.log("restarting because we didnt choose a number correctly :(")
-        generatePassword();
-      }
+      
     }
 
     if (!n && !l && !lc && !uc && !sc){ //user fails to choose any keys for their password, we can't have a blank password, so we will not move forward!
       alert("No characters chosen means no password. Restarting now :()")
       console.log("yeah you gotta restart...")
-      generatePassword();
+      passwordArray = "Click to Retry";
+      return passwordArray;
     }
   
     console.log("n = "+ n) // logging for development end to see.
